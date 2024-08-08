@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>xoan tinh hoan thang hung</title>
+</head>
+<body>
+  <h1>
+    Hello,don't click the button'!😇 -99
+  </h1>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Màu chữ trắng</title>
+    <style>
+        .white-text {
+            color: white; /* Đổi màu chữ thành trắng */
+        }
+
+    </style>
+</head>
+<body>
+    <p class="white-text">Me May Beo :).</p>
+</body>
+</html><!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nút bấm và reset</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            transition: background-color 0.3s; /* Hiệu ứng chuyển đổi mượt mà cho màu nền */
+        }
+
+        .circle-button {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #4CAF50; /* Màu nền của nút */
+            color: white; /* Màu chữ */
+            border: none; /* Không viền */
+            cursor: pointer; /* Con trỏ chuột khi hover */
+            font-size: 16px; /* Kích thước chữ */
+            margin-right: 10px; /* Khoảng cách giữa hai nút */
+        }
+
+        .circle-button:hover {
+            background-color: #45a049; /* Màu nền khi hover */
+        }
+
+        .reset-link {
+            display: none; /* Ẩn liên kết khi bắt đầu */
+            margin-top: 20px; /* Khoảng cách trên liên kết */
+            color: white; /* Màu chữ liên kết */
+            background-color: white; /* Màu nền liên kết */
+            padding: 10px 20px; /* Padding cho liên kết */
+            text-decoration: none; /* Loại bỏ gạch chân */
+            border-radius: 5px; /* Bo tròn góc liên kết */
+            font-size: 16px; /* Kích thước chữ */
+            cursor: pointer; /* Con trỏ chuột khi hover */
+            display: inline-block; /* Để liên kết có thể có padding */
+        }
+
+        .reset-link:hover {
+            background-color: #333; /* Màu nền khi hover */
+        }
+    </style>
+</head>
+<body>
+    <button class="circle-button" onclick="incrementScore()">Nhấn vào</button>
+    <a href="#" class="reset-link" id="resetLink" onclick="reset(event)">Reset</a>
+  
+    <p>Điểm số: <span id="score">0</span></p>
+    <script>
+        let score = 0;
+
+        function incrementScore() {
+            score++;
+            document.getElementById("score").textContent = score;
+
+            if (score === 99) {
+                document.body.style.backgroundColor = "black";
+                document.getElementById("resetLink").style.display = "inline-block";
+            }
+        }
+
+        function reset(event) {
+            event.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
+            score = 0;
+            document.getElementById("score").textContent = score;
+            document.body.style.backgroundColor = ""; // Đặt lại màu nền về mặc định
+            document.getElementById("resetLink").style.display = "none"; // Ẩn liên kết reset
+        }
+    </script>
+</body>
+</html>
